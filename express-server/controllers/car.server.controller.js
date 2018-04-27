@@ -27,16 +27,6 @@ export const addCar = (req, res) => {
   })
 }
 
-/* export const updateTodo = (req, res) => {
-  Todo.findOneAndUpdate({ _id: req.body.id }, req.body, { new: true }, (err, todo) => {
-    if (err) {
-      return res.json({ 'success': false, 'message': 'Some Error', 'error': err });
-    }
-    console.log(todo);
-    return res.json({ 'success': true, 'message': 'Updated successfully', todo });
-  })
-} */
-
 export const getCar = (req, res) => {
   Car.find({ _id: req.params.id }).exec((err, car) => {
     if (err) {

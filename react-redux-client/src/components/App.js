@@ -14,27 +14,7 @@ export default class App extends React.Component {
     this.toggleAddCar = this.toggleAddCar.bind(this);
     this.addCar = this.addCar.bind(this);
 
- //   this.handleChange = this.handleChange.bind(this);
-
-    /* this.state = {
-      value: ''
-    }; */
-
   }
-
-/*   getValidationState() {
-    const value = this.state.value;
- 
-    if (!value) return value[0].toUpperCase();
-
-    console.log(value);
- 
-  } */
-
- /*  handleChange(e) {
-    this.setState({ value: e.target.value });
-  }
- */
 
   toggleAddCar(e) {
     e.preventDefault();
@@ -93,9 +73,7 @@ export default class App extends React.Component {
                 <div className="col-md-12">
                   <FormGroup>
                     <ControlLabel>Car: </ControlLabel>
-                    <FormControl
-                    //  value={this.state.value}
-                     // onChange={this.handleChange}    
+                    <FormControl  
                       type="text" placeholder="Enter car plate number" required
                       name="carNumber" maxLength="6" minLength="6" 
                       pattern="(\w{3}).*?(\d{3})" title="Three letters and three numbers car number"
@@ -117,8 +95,6 @@ export default class App extends React.Component {
                 <Button type="submit" bsStyle="success" bsSize="large" block>Submit</Button>
               </FormGroup>
             </form>
-
-
 
             /* 
                         <CarForm addCar={this.addCar} /> */

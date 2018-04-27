@@ -16,31 +16,7 @@ export default class Cars extends React.Component {
   componentWillMount() {
     this.props.fetchCars();
   }
-
- /*  showEditModal(carToEdit) {
-    this.props.mappedshowEditModal(carToEdit);
-  } */
-
-  /*  hideEditModal() {
-     this.props.mappedhideEditModal();
-   } */
-
-  /*   submitEditTodo(e) {
-      e.preventDefault();
-      const editForm = document.getElementById('EditTodoForm');
-      if (editForm.todoText.value !== "") {
-        const data = new FormData();
-        data.append('id', editForm.id.value);
-        data.append('todoText', editForm.todoText.value);
-        data.append('todoDesc', editForm.todoDesc.value);
-        this.props.mappedEditTodo(data);
-      }
-      else {
-        return;
-      }
-  
-    } */
-
+ 
   hideDeleteModal() {
     this.props.mappedhideDeleteModal();
   }
@@ -82,44 +58,7 @@ export default class Cars extends React.Component {
             </tbody>
           </table>
         }
-
-        {/* Modal for editing todo */}
-        {/*    <Modal
-          show={todoState.showEditModal}
-          onHide={this.hideEditModal}
-          container={this}
-          aria-labelledby="contained-modal-title"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title">Edit Your Todo</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div className="col-md-12">
-              {editTodo &&
-                <TodoEditForm todoData={editTodo} editTodo={this.submitEditTodo} />
-              }
-              {editTodo && todoState.isFetching &&
-                <Alert bsStyle="info">
-                  <strong>Updating...... </strong>
-                </Alert>
-              }
-              {editTodo && !todoState.isFetching && todoState.error &&
-                <Alert bsStyle="danger">
-                  <strong>Failed. {todoState.error} </strong>
-                </Alert>
-              }
-              {editTodo && !todoState.isFetching && todoState.successMsg &&
-                <Alert bsStyle="success">
-                  Book <strong> {editTodo.todoText} </strong>{todoState.successMsg}
-                </Alert>
-              }
-            </div>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.hideEditModal}>Close</Button>
-          </Modal.Footer>
-        </Modal> */}
-
+ 
         {/* Modal for deleting todo */}
         <Modal
           show={carState.showDeleteModal}

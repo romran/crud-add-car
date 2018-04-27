@@ -10,8 +10,7 @@ const router = express.Router();
 router.route('/')
      .get(carController.getCars)
      .post(carController.addCar);
-    // .put(todoController.updateTodo);
-
+     
 router.route('/:id')
       .get(carController.getCar)
       .delete(carController.deleteCar);

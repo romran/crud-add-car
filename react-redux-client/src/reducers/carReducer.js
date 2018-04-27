@@ -24,8 +24,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:null,
             showDeleteModal: false,
             carToDelete: null,
-           // showEditModal: false,
-          //  carToEdit: null,
           }
 
     case 'FETCH_CARS_SUCCESS':
@@ -38,8 +36,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:action.message,
             showDeleteModal: false,
             carToDelete: null,
-            //showEditModal: false,
-          //  carToEdit: null,
           }
 
     case 'FETCH_CARS_FAILED':
@@ -52,8 +48,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:null,
             showDeleteModal: false,
             carToDelete: null,
-           /// showEditModal: false,
-          //  carToEdit: null,
           }
 
     case 'FETCH_CAR_REQUEST':
@@ -66,8 +60,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:null,
             showDeleteModal: false,
             carToDelete: null,
-          //  showEditModal: false,
-          //  carToEdit: null,
           }
 
     case 'FETCH_CAR_SUCCESS':
@@ -80,8 +72,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:action.message,
             showDeleteModal: false,
             carToDelete: null,
-           // showEditModal: false,
-          //  carToEdit: null,
           }
 
     case 'FETCH_CAR_FAILED':
@@ -94,8 +84,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:null,
             showDeleteModal: false,
             carToDelete: null,
-           // showEditModal: false,
-          //  carToEdit: null,
           }
 
     case 'ADD_NEW_CAR_REQUEST':
@@ -108,8 +96,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:null,
             showDeleteModal: false,
             carToDelete: null,
-           // showEditModal: false,
-          //  carToEdit: null,
             newCar: action.car
           }
 
@@ -123,8 +109,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:null,
             showDeleteModal: false,
             carToDelete: null,
-           // showEditModal: false,
-          //  carToEdit: null,
             newCar: null
           }
 
@@ -138,94 +122,9 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
             successMsg:action.message,
             showDeleteModal: false,
             carToDelete: null,
-          //  showEditModal: false,
-          //  carToEdit: null,
             newCar: action.car
           }
         return nextState;
-
-/*   case 'SHOW_EDIT_MODAL':
-        return {
-          ...currentState,
-          cars:currentState.cars,
-          car:null,
-          isFetching: false,
-          error: null,
-          successMsg:null,
-          showDeleteModal: false,
-          carToDelete: null,
-          showEditModal: true,
-          carToEdit: action.car,
-          newCar: null
-        } */
-
-/*   case 'HIDE_EDIT_MODAL':
-        return {
-          ...currentState,
-          cars:currentState.cars,
-          car:null,
-          isFetching: false,
-          error: null,
-          successMsg:null,
-          showDeleteModal: false,
-          carToDelete: null,
-          showEditModal: false,
-          carToEdit: null,
-          newCar: null
-        } */
-
-/*     case 'EDIT_CAR_REQUEST':
-          return {
-            ...currentState,
-            cars:currentState.cars,
-            car:null,
-            isFetching: true,
-            error: null,
-            successMsg:null,
-            showDeleteModal: false,
-            carToDelete: null,
-            showEditModal: true,
-            carToEdit: action.car,
-            newCar: null
-          } */
-
-/*     case 'EDIT_CAR_SUCCESS':
-         const updatedCars = currentState.cars.map((car) => {
-           if(car._id !== action.car._id){
-             //This is not the item we care about, keep it as is
-             return car;
-           }
-           //Otherwise, this is the one we want to return an updated value
-           return { ...car, ...action.car }
-         })
-          return {
-            ...currentState,
-            cars:updatedCars,
-            car:null,
-            isFetching: false,
-            error: null,
-            successMsg:action.message,
-            showDeleteModal: false,
-            carToDelete: null,
-            showEditModal: true,
-            carToEdit: action.car,
-            newCar: null
-          }
- */
-/*   case 'EDIT_CAR_FAILED':
-        return {
-          ...currentState,
-          cars:currentState.cars,
-          car:null,
-          isFetching: false,
-          error: action.error,
-          successMsg:null,
-          showDeleteModal: false,
-          carToDelete: null,
-          showEditModal: true,
-          carToEdit: currentState.carToEdit,
-          newCar: null
-        } */
 
   case 'DELETE_CAR_REQUEST':
         return {
@@ -237,8 +136,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
           successMsg:null,
           showDeleteModal: true,
           carToDelete: action.car,
-        //  showEditModal: false,
-       //   carToEdit: null,
           newCar: null
         }
 
@@ -253,8 +150,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
           successMsg:action.message,
           showDeleteModal: true,
           carToDelete: null,
-        //  showEditModal: false,
-       //   carToEdit: null,
           newCar: null
         }
 
@@ -269,8 +164,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
           successMsg:null,
           showDeleteModal: true,
           carToDelete: null,
-        //  showEditModal: false,
-        //  carToEdit: null,
           newCar: null
         }
 
@@ -284,8 +177,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
           successMsg:null,
           showDeleteModal: true,
           carToDelete: action.car,
-        //  showEditModal: false,
-        //  carToEdit: null,
           newCar: null
         }
 
@@ -299,8 +190,6 @@ export  const carReducer = (currentState = INITIAL_STATE, action) => {
           successMsg:null,
           showDeleteModal: false,
           carToDelete: null,
-         // showEditModal: false,
-        //  carToEdit: null,
           newCar: null
         }
 
