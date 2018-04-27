@@ -7,8 +7,6 @@ const INITIAL_STATE = {
   successMsg:null,
   showDeleteModal: false,
   carToDelete: null,
- // showEditModal: false,
- // carToEdit: null,
   newCar: null
 }
 
