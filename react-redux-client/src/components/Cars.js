@@ -82,12 +82,6 @@ export default class Cars extends React.Component {
               </Alert>
             }
 
-            {carState.carToDelete && !carState.error && carState.isFetching &&
-              <Alert bsStyle="success">
-                <strong>Deleting.... </strong>
-              </Alert>
-            }
-
             {!carState.carToDelete && !carState.error && !carState.isFetching &&
               <Alert bsStyle="success">
                 Car <strong>{carState.successMsg} </strong>

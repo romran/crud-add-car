@@ -54,7 +54,7 @@ export default class App extends React.Component {
           <Navbar.Collapse>
             <Nav>
               <LinkContainer to={{ pathname: '/', query: {} }} onClick={this.offAddCar}>
-                <NavItem eventKey={1}>Home</NavItem>
+                <NavItem eventKey={1}>List</NavItem>
               </LinkContainer>
             </Nav>
             <Nav pullRight>

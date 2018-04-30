@@ -27,7 +27,7 @@ const CarForm = (props) => {
             <FormControl
               required
               type="text"
-              placeholder="Enter car's owner"
+              placeholder="Enter car owner"
               name="carOwner"
               maxLength="250" minLength="1"
             />
