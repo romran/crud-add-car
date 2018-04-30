@@ -2,34 +2,30 @@
 
 const apiUrl = "/api/";
 
-export const toggleAddBook = () => {
-  return {
-    type: 'TOGGLE_ADD_CAR'
-  }
-}
-
-export const addNewCar = (car) => {
-  console.log(car)
-  return (dispatch) => {
+export const addNewCar = car => {
+  console.log(car);
+  return dispatch => {
     dispatch(addNewCarRequest(car));
     return fetch(apiUrl, {
-      method: 'post',
-      body: car,
-    }).then(response => {
-      if (response.ok) {
-        response.json().then(data => {
-          console.log(data.car);
-          dispatch(addNewCarRequestSuccess(data.car, data.message))
-        })
-      }
-      else {
-        response.json().then(error => {
-          dispatch(addNewCarRequestFailed(error))
-        })
-      }
+      method: "post",
+      body: car
     })
-  }
-}
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw Error(response.statusText)
+        }
+      })
+      .then(data => {
+        dispatch(addNewCarRequestSuccess(data.car, data.message));
+      })
+      .catch(error => {
+        dispatch(addNewCarRequestFailed(error.message));
+      });
+  };
+};
+
 
 export const addNewCarRequest = (car) => {
   return {
@@ -58,7 +54,6 @@ export const fetchCars = () => {
   // Returns a dispatcher function
   // that dispatches an action at later time
   return (dispatch) => {
-
     dispatch(fetchCarsRequest());
     // Returns a promise
     return fetch(apiUrl)
@@ -74,8 +69,6 @@ export const fetchCars = () => {
           })
         }
       })
-
-
   }
 }
 
@@ -99,52 +92,6 @@ export const fetchCarsSuccess = (cars, message) => {
 export const fetchCarsFailed = (error) => {
   return {
     type: 'FETCH_CARS_FAILED',
-    error
-  }
-}
-
-export const fetchCarById = (carId) => {
-  return (dispatch) => {
-    dispatch(fetchCarRequest());
-    // Returns a promise
-    return fetch(apiUrl + carId)
-      .then(response => {
-        console.log(response)
-        if (response.ok) {
-          response.json().then(data => {
-            dispatch(fetchCarSuccess(data.car[0], data.message));
-          })
-        }
-        else {
-          response.json().then(error => {
-            dispatch(fetchCarFailed(error));
-          })
-        }
-      })
-
-  }
-}
-
-export const fetchCarRequest = () => {
-  return {
-    type: 'FETCH_CAR_REQUEST'
-  }
-}
-
-
-//Sync action
-export const fetchCarSuccess = (car, message) => {
-  return {
-    type: 'FETCH_CAR_SUCCESS',
-    car: car,
-    message: message,
-    receivedAt: Date.now
-  }
-}
-
-export const fetchCarFailed = (error) => {
-  return {
-    type: 'FETCH_CAR_FAILED',
     error
   }
 }
@@ -191,15 +138,15 @@ export const deleteCarFailed = (error) => {
   }
 }
 
-export const showDeleteModal = (carToDelete) => {
+export const showModal = (carToDelete) => {
   return {
-    type: 'SHOW_DELETE_MODAL',
+    type: 'SHOW_MODAL',
     car: carToDelete
   }
 }
 
-export const hideDeleteModal = () => {
+export const hideModal = () => {
   return {
-    type: 'HIDE_DELETE_MODAL'
+    type: 'HIDE_MODAL'
   }
 }

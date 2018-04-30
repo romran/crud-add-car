@@ -3,11 +3,12 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from './containers/App';
 import Cars from './containers/Cars';
-import Car from './containers/Car';
+import NotFoundRoute from './components/NotFoundRoute';
 
 export default (
   <Route path="/" component={App}>
-     <IndexRoute component={Cars} />
-     <Route path="/:id" component={Car} />
+    <IndexRoute component={Cars} />
+    <Route path="*" component={NotFoundRoute} />
   </Route>
+
 )

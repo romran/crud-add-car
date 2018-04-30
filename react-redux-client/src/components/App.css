@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+.navbar-header, .navbar-inverse {
+  background-color: #003f63 !important;
+  border: none !important;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+  background-color: #009edd !important;
+}
+.navbar-brand {
+  color: white !important;
+}
+
 .centerAlign{text-align: center;vertical-align: middle;}
 
- 
+ .row {
+   margin: 0 !important;
+
+ }
+
+ .form-group {
+   margin:  0 !important;
+   padding-top: 15px !important;
+   width: 100%;
+ }

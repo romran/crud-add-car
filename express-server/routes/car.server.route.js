@@ -8,11 +8,10 @@ import * as carController from '../controllers/car.server.controller';
 const router = express.Router();
 
 router.route('/')
-     .get(carController.getCars)
-     .post(carController.addCar);
-     
+      .get(carController.getCars)
+      .post(carController.addCar);
+
 router.route('/:id')
-      .get(carController.getCar)
       .delete(carController.deleteCar);
 
 

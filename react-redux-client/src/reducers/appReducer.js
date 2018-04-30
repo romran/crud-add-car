@@ -6,13 +6,17 @@ const INITIAL_STATE = {
 const appReducer = (currentState = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'TOGGLE_ADD_CAR':
-          return {
-            ...currentState,showAddCar: !currentState.showAddCar
-          }
+      return {
+        ...currentState, showAddCar: !currentState.showAddCar
+      }
 
+    case 'OFF_ADD_CAR':
+      return {
+        ...currentState, showAddCar: false
+      }
 
     default:
-       return currentState;
+      return currentState;
 
   }
 }

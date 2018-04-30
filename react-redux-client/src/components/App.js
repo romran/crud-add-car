@@ -3,17 +3,14 @@ import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './App.css';
-//import CarForm from './CarForm';
-
-import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
-
+import CarForm from './CarForm';
 
 export default class App extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.toggleAddCar = this.toggleAddCar.bind(this);
     this.addCar = this.addCar.bind(this);
-
+    this.offAddCar = this.offAddCar.bind(this);
   }
 
   toggleAddCar(e) {
@@ -21,6 +18,12 @@ export default class App extends React.Component {
     this.props.mappedToggleAddCar();
   }
 
+  offAddCar(e) {
+    e.preventDefault();
+    this.props.mappedOffAddCar();
+  }
+
+  //addCar(car) {
   addCar(e) {
     e.preventDefault();
     const form = document.getElementById('addCarForm');
@@ -28,20 +31,17 @@ export default class App extends React.Component {
       const data = new FormData();
       data.append('carNumber', form.carNumber.value.toUpperCase());
       data.append('carOwner', form.carOwner.value);
-      // const data = {
-      //   todoText: form.todoText.value,
-      //   todoDesc: form.todoDesc.value
-      // }
       this.props.mappedAddCar(data);
       form.reset();
     }
     else {
-      return;
+      return
     }
   }
 
   render() {
     const appState = this.props.mappedAppState;
+    console.log(appState);
     return (
       <div>
         <Navbar inverse collapseOnSelect className="customNav">
@@ -53,7 +53,7 @@ export default class App extends React.Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <LinkContainer to={{ pathname: '/', query: {} }}>
+              <LinkContainer to={{ pathname: '/', query: {} }} onClick={this.offAddCar}>
                 <NavItem eventKey={1}>Home</NavItem>
               </LinkContainer>
             </Nav>
@@ -66,38 +66,7 @@ export default class App extends React.Component {
         </Navbar>
         <div className="container">
           {appState.showAddCar &&
-
-            <form className="form form-horizontal" id="addCarForm" onSubmit={this.addCar}>
-              <div className="row">
-                <h3 className="centerAlign">Add Car</h3>
-                <div className="col-md-12">
-                  <FormGroup>
-                    <ControlLabel>Car: </ControlLabel>
-                    <FormControl  
-                      type="text" placeholder="Enter car plate number" required
-                      name="carNumber" maxLength="6" minLength="6" 
-                      pattern="(\w{3}).*?(\d{3})" title="Three letters and three numbers car number"
-                    />
-                  </FormGroup>
-                </div>
-                <div className="col-md-12">
-                  <FormGroup>
-                    <ControlLabel>Owner: </ControlLabel>
-                    <FormControl
-                      type="text" placeholder="Enter car's owner"
-                      name="carOwner" required
-                      maxLength="250" minLength="1" 
-                    />
-                  </FormGroup>
-                </div>
-              </div>
-              <FormGroup>
-                <Button type="submit" bsStyle="success" bsSize="large" block>Submit</Button>
-              </FormGroup>
-            </form>
-
-            /* 
-                        <CarForm addCar={this.addCar} /> */
+            <CarForm addCar={this.addCar} />
           }
           { /* Each Smaller Components */}
           {this.props.children}

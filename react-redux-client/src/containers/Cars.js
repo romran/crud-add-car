@@ -17,8 +17,8 @@ const mapDispatchToProps = (dispatch) => {
     //you can now say this.props.mappedAppActions
     fetchCars: () => dispatch(carActions.fetchCars()),
     mappedDeleteCar: carToDelete => dispatch(carActions.deleteCar(carToDelete)),
-    mappedshowDeleteModal: carToDelete => dispatch(carActions.showDeleteModal(carToDelete)),
-    mappedhideDeleteModal: () => dispatch(carActions.hideDeleteModal())
+    mappedshowModal: carToDelete => dispatch(carActions.showModal(carToDelete)),
+    mappedhideModal: () => dispatch(carActions.hideModal()),
   }
 }
 
