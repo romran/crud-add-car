@@ -2,7 +2,6 @@
 import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import './App.css';
 import CarForm from './CarForm';
 
 export default class App extends React.Component {
@@ -41,13 +40,12 @@ export default class App extends React.Component {
 
   render() {
     const appState = this.props.mappedAppState;
-    console.log(appState);
-    return (
+     return (
       <div>
         <Navbar inverse collapseOnSelect className="customNav">
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/#">Add Car App</a>
+              <a href="/#">Add Car</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

@@ -3,25 +3,29 @@
 }
 
 .navbar-header, .navbar-inverse {
-  background-color: #003f63 !important;
-  border: none !important;
+  background-color: #003f63;
+  border: none;
 }
 
 .navbar-inverse .navbar-nav>.active>a {
-  background-color: #009edd !important;
+  background-color: #009edd;
 }
-.navbar-brand {
+a.navbar-brand {
   color: white !important;
 }
 
 .centerAlign{text-align: center;vertical-align: middle;}
 
  .row {
-   margin: 0 !important;
+   margin: 0;
  }
 
  .form-group {
-   margin:  0 !important;
-   padding-top: 15px !important;
+   margin:  0;
+   padding-top: 15px;
    width: 100%;
+ }
+
+ .navbar {
+   border-radius: 0;
  }

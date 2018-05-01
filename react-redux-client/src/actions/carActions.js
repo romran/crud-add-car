@@ -1,5 +1,3 @@
-// ./react-redux-client/src/actions/carActions.js
-
 const apiUrl = "/api/";
 
 export const addNewCar = car => {
