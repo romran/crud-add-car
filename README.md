@@ -3,6 +3,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+
+Basic crud application using MERN stack. 
+
+## Quick Setup
+
+* setup and run [MongoDB](https://docs.mongodb.com/manual/installation/) on your local machine. By default, `mongodb` server should start at port 27017
+
+* `npm install -g nodemon` to automatically restart the server on changes
+
+* `cd express-server` `npm install` `npm run` to start back-end express server: `http://localhost:3001/api`
+
+* `cd react-redux-client` `npm install` `npm run` to start app: `http://localhost:3000`
+
+
+
+
+
+Create React App is divided into two packages:
+
+* `create-react-app` is a global command-line utility that you use to create new projects.
+* `react-scripts` is a development dependency in the generated projects (including this one).
+
+
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
