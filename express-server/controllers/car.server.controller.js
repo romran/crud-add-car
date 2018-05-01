@@ -1,4 +1,3 @@
-// ./express-server/controllers/car.server.controller.js
 import mongoose from 'mongoose';
 
 //import models
@@ -9,7 +8,6 @@ export const getCars = (req, res) => {
     if (err) {
       return res.json({ 'message': 'Some Error' });
     }
-
     return res.json({ 'message': 'Cars fetched successfully', cars });
   });
 }

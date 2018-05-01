@@ -4,7 +4,8 @@
   "description": "express server for mern todo app",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app_hooked.js"
+    "start": "nodemon app_hooked.js",
+    "test": "mocha --timeout 10000"
   },
   "dependencies": {
     "babel-preset-es2015-node6": "^0.4.0",
@@ -15,5 +16,10 @@
     "mongoose": "^4.11.7",
     "morgan": "^1.8.2",
     "source-map-support": "^0.4.16"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "supertest": "^3.0.0"
   }
 }

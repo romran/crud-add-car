@@ -8,7 +8,7 @@
 }
 
 .navbar-inverse .navbar-nav>.active>a {
-  background-color: #009edd;
+  background-color: #009edd !important;
 }
 a.navbar-brand {
   color: white !important;
@@ -28,4 +28,8 @@ a.navbar-brand {
 
  .navbar {
    border-radius: 0;
+ }
+
+ .form-horizontal .form-group {
+   margin: 0;
  }

@@ -7,10 +7,9 @@ const CarForm = (props) => {
   return (
     <form className="form form-horizontal" id="addCarForm" onSubmit={props.addCar}>
       <div className="row">
-        <h3 className="centerAlign">Add Car</h3>
-        <div className="col-md-12">
+         <div className="col-md-12">
           <FormGroup>
-            <ControlLabel>Car: </ControlLabel>
+            <ControlLabel>Car Number: </ControlLabel>
             <FormControl
               required
               type="text"
@@ -23,7 +22,7 @@ const CarForm = (props) => {
         </div>
         <div className="col-md-12">
           <FormGroup>
-            <ControlLabel>Owner: </ControlLabel>
+            <ControlLabel>Car Owner: </ControlLabel>
             <FormControl
               required
               type="text"

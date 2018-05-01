@@ -1,4 +1,3 @@
-// ./express-server/routes/todo.server.route.js
 import express from 'express';
 
 //import controller file
