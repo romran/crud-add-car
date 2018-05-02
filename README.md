@@ -16,4 +16,4 @@ For front-end:
 * `cd react-redux-client` and `npm test` (basic coverage) 
 
 For back-end:
-* `cd express-server` and `npm test` (needs improvment) 
+* `cd express-server` and `npm test` (needs improvement) 
