@@ -43,7 +43,7 @@ describe('App reducers', () => {
 })
 
 
-describe('Car reducers', () => {
+/* describe('Car reducers', () => {
   it('should return the initial state', () => {
     expect(carReducer(undefined, {})).toEqual(
       {
@@ -61,7 +61,7 @@ describe('Car reducers', () => {
 
  
 
-/*   it('should handle OFF_ADD_CAR', () => {
+  it('should handle OFF_ADD_CAR', () => {
     expect(
       appReducer([], {
         type: "OFF_ADD_CAR",
@@ -71,8 +71,8 @@ describe('Car reducers', () => {
         showAddCar: false
       }
     )
-  }) */
-})
+  })
+}) */
 
 
 
