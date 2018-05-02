@@ -1,4 +1,3 @@
-// ./react-redux-client/src/components/Cars.js
 import React from 'react';
 import { Alert, Glyphicon, Button, Modal } from 'react-bootstrap';
 
