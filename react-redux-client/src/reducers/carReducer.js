@@ -1,4 +1,4 @@
-const INITIAL_STATE = {
+ const INITIAL_STATE = {
   cars: [],
   car: null,
   isFetching: false,
