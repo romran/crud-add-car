@@ -2,7 +2,7 @@ Basic Crud application using MERN stack.
 
 #### Quick Setup
 
-* Setup and run [MongoDB](https://docs.mongodb.com/manual/administration/install-community/) on your local machine. By default, `mongodb` server should start at port 27017
+* Setup and run [MongoDB](https://docs.mongodb.com/manual/administration/install-community/) on your local machine. After installation create folder `C:\data\db` and `cd` to `C:\Program Files\MongoDB\Server\3.2\bin>` and enter command `mongod` (works for Windows). By default, `mongodb` server should start at port 27017
 
 * `npm install -g nodemon` to automatically restart the server on changes
 
