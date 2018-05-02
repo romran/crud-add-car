@@ -1,10 +1,6 @@
-
-
-
 var request = require ('supertest');
 
 var app = require('../app');
-
 
 describe("app", function(){
     it("connects", function(done){

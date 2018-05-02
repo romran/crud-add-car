@@ -1,4 +1,3 @@
-// ./react-redux-client/src/reducers/carReducer.js
 const INITIAL_STATE = {
   cars: [],
   car: null,

@@ -45,7 +45,7 @@ export default class App extends React.Component {
         <Navbar inverse collapseOnSelect className="customNav">
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/#">Add Car</a>
+              <a href="/#">Home</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

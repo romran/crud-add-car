@@ -34,7 +34,7 @@ const CarForm = (props) => {
         </div>
       </div>
       <FormGroup>
-        <Button type="submit" bsStyle="success" bsSize="large" block>Submit</Button>
+        <Button type="submit" bsStyle="success" bsSize="large" block>Add</Button>
       </FormGroup>
     </form>
   );
