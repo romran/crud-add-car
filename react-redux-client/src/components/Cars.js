@@ -115,7 +115,7 @@ export default class Cars extends React.Component {
 
             {carState.newCar === undefined &&
               <Alert bsStyle="warning">
-                Failed. <strong>{carState.successMsg} </strong>
+                 <strong>{carState.successMsg} </strong>
               </Alert>
             }
 

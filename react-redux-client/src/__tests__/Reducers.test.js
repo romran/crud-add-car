@@ -59,19 +59,8 @@ describe('App reducers', () => {
     )
   })
 
- 
+  // TODO: Find why `TypeError: (0 , _carReducer2.default) is not a function` ?
 
-  it('should handle OFF_ADD_CAR', () => {
-    expect(
-      appReducer([], {
-        type: "OFF_ADD_CAR",
-      })
-    ).toEqual(
-      {
-        showAddCar: false
-      }
-    )
-  })
 }) */
 
 
