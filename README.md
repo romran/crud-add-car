@@ -1,6 +1,6 @@
 Basic Crud application using MERN stack. 
 
-## Quick Setup
+#### Quick Setup
 
 * Setup and run [MongoDB](https://docs.mongodb.com/manual/administration/install-community/) on your local machine. By default, `mongodb` server should start at port 27017
 
@@ -10,7 +10,7 @@ Basic Crud application using MERN stack.
 
 * `cd react-redux-client` and `npm install`to setup dependencies and `npm start` to start app: `http://localhost:3000`
 
-## Testing
+#### Testing
 
 For front-end:
 * `cd react-redux-client` and `npm test` (basic coverage) 
